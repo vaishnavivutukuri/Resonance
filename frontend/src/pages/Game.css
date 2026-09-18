@@ -1,0 +1,112 @@
+.game-setup {
+  display: flex;
+  flex-direction: column;
+  max-width: 860px;
+  margin: 0 auto;
+  animation: fade-up 0.5s var(--ease-luxe) both;
+}
+
+.game-setup__header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  background: linear-gradient(165deg, rgba(232,196,118,0.08) 0%, rgba(20,17,28,0.7) 60%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-lg);
+  padding: 1.8rem;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+.game-setup__header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 12%; right: 12%;
+  height: 1px;
+  background: var(--gold-hairline);
+}
+
+.game-setup__cover {
+  width: 170px;
+  height: 170px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-gold-frame);
+  border: 1px solid var(--border-strong);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.game-arena {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background:
+    radial-gradient(ellipse 62% 40% at 50% 0%, rgba(232,196,118,0.16) 0%, transparent 65%),
+    var(--gradient-game);
+  display: flex;
+  flex-direction: column;
+}
+.game-arena::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(0,0,0,0.55) 0%, transparent 18%, transparent 82%, rgba(0,0,0,0.55) 100%);
+}
+
+.game-arena__hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 104px;
+  padding: 1.3rem 2rem 2.2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 10;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(5,4,8,0.88), transparent);
+}
+
+.game-arena__hud-left, .game-arena__hud-right { flex: 1; }
+.game-arena__hud-right { display: flex; justify-content: flex-end; }
+.game-arena__hud-center { flex: 1; display: flex; justify-content: center; }
+
+.game-arena__score {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-primary);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.8), 0 0 24px rgba(232,196,118,0.25);
+  letter-spacing: -0.02em;
+}
+
+.game-arena__countdown {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: clamp(5rem, 14vw, 9rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 34px rgba(232,196,118,0.45)) drop-shadow(0 4px 12px rgba(0,0,0,0.8));
+  z-index: 20;
+  pointer-events: none;
+}
+
+.game-arena__canvas-container {
+  flex: 1;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  padding: 96px 1rem 1.2rem;
+}

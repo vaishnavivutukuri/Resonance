@@ -1,0 +1,62 @@
+.playlist-card {
+  background: linear-gradient(165deg, rgba(232,196,118,0.06) 0%, var(--bg-card) 55%);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-default);
+  border: 1px solid var(--border-subtle);
+}
+.playlist-card:hover {
+  background: var(--bg-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), 0 0 24px rgba(232,196,118,0.12);
+  border-color: var(--border-strong);
+}
+
+.playlist-card__art {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: 0.9rem;
+  background: linear-gradient(135deg, #3A2E18, #14121C);
+  box-shadow: inset 0 0 0 1px rgba(232,196,118,0.14);
+}
+.playlist-card__art img { width: 100%; height: 100%; object-fit: cover; }
+.playlist-card__art-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  color: var(--gold-solid);
+  background: radial-gradient(circle at 50% 30%, rgba(232,196,118,0.25), transparent 70%);
+}
+.playlist-card__play-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(5,4,8,0.7) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.8rem;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.playlist-card:hover .playlist-card__play-overlay { opacity: 1; }
+.playlist-card__play-overlay span {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #221806;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 22px rgba(232,196,118,0.45);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.playlist-card__name { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); font-family: var(--font-display); }
+.playlist-card__private { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-solid); opacity: 0.65; margin-top: 3px; font-weight: 700; }

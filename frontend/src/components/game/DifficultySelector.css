@@ -1,0 +1,70 @@
+.diff-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+.diff-btn {
+  background: linear-gradient(165deg, rgba(232,196,118,0.05) 0%, rgba(20,17,28,0.7) 60%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.15rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-default);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.diff-btn:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.diff-btn--active {
+  background: linear-gradient(165deg, rgba(232,196,118,0.16) 0%, rgba(20,17,28,0.9) 70%);
+  border-color: var(--gold-solid);
+  box-shadow: var(--shadow-glow), inset 0 1px 0 rgba(232,196,118,0.2);
+  transform: translateY(-2px);
+}
+.diff-btn--active::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 14%; right: 14%;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.diff-btn__label {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--gold-solid);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.diff-btn__desc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.diff-btn__stats {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}

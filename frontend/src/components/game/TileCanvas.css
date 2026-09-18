@@ -1,0 +1,57 @@
+.tile-canvas-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  position: relative;
+  background:
+    radial-gradient(ellipse 70% 30% at 50% 0%, rgba(232,196,118,0.12) 0%, transparent 65%),
+    linear-gradient(180deg, #0A0812 0%, #100D18 50%, #1A1426 100%);
+  overflow: hidden;
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-gold-frame), inset 0 0 60px rgba(0,0,0,0.75);
+}
+.tile-canvas-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20%; right: 20%;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(232,196,118,0.14), transparent);
+  pointer-events: none;
+}
+
+.tile-canvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+  display: block;
+}
+
+.tile-canvas__hints {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.tile-canvas__hints span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-solid);
+  border: 1px solid var(--border-default);
+  background: rgba(8,7,11,0.6);
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 10px rgba(232,196,118,0.4);
+}
