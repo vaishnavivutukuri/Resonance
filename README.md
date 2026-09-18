@@ -1,5 +1,3 @@
-# 🎵 Resonance
-
 ## What is Resonance?
 
 Resonance is a full-stack, feature-complete music streaming platform fused with a Magic Tiles 3-style rhythm game. It allows users to stream any song completely free — no ads, no paywalls, no currency — and then play that same song as an auto-generated rhythm game with multiple difficulty tiers. Friends can compete in real-time head-to-head tile-tapping duels over WebSockets, track rankings on per-song leaderboards, and interact through a social layer including friend requests, activity feeds, and in-app notifications.
@@ -176,7 +174,7 @@ resonance/
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
-© 2026 Eswar Vutukuri
+© 2026 Vaishnavi Vutukuri, Eswar Vutukuri
 
 ## Acknowledgements
 
